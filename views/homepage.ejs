@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/homepage.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="image-sec">
+            <p>Blogs Villa</p>
+        </div>
+        <div class="quick-links">
+            <a href="/homepage/<%= userdata.username  %>">Home</a>
+            <a href="/community/<%= userdata.username  %>">Community</a>
+        </div>
+    </div>
+    <div class="main-div">
+        <div class="label-div">
+            <div class="image-div">
+                <img src="<%= userdata.image_path %>" alt="" class="profile-pic">
+            </div>
+            <div class="data-div">
+                <p class="name"><%= userdata.name  %></p>
+                <p class="username">@<%= userdata.username  %></p>
+                <p class="email"><span style="font-weight: bolder;">Email</span> : <%= userdata.email  %></p>
+            </div>
+            <div class="button-div">
+                <button class="button"><a href="/write/<%= userdata.username  %>">Write</a></button>
+            </div>
+        </div>
+        <div class="joining-div">
+            <p>Joined On <%= date  %> at <%= time  %></p>
+        </div>
+        <div class="blog">
+            <p class="blog-header">Your Blogs</p>
+        </div>
+        <div class="blog-div">
+            <% for(let blog of blogData) { %>
+                <% if(blog.username==userdata.username) {%>
+                    <a href="/blog/<%= blog._id %>">
+                        <p class="blog-title"><%= blog.title  %></p>
+                        <p class="blog-username">@<%= userdata.username %></p>
+                        <p style="color: white;" class="blog-content"><%= blog.content.substring(0,100) %>....</p>
+                    </a>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

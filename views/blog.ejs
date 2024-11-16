@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/blog.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="blog">
+        <p class="blog-header"><%= blogData.title %></p>
+        <p class="blog-subheader">Written By @<%= blogData.username %> on <%= date %> at <%= time %></p>
+        <p class="blog-content"><%= blogData.content %></p>
+    </div>
+</body>
+</html>

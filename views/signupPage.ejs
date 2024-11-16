@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signupPage.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="left-end">
+        <div class="login-space">
+            <form action="/signup" method="post" class="login-form" enctype="multipart/form-data">
+                <h1>Sign Up</h1>
+                <label for="name">
+                    Name <br>
+                    <input type="text" class="name" id="name" name="name">
+                </label>
+                <label for="username">
+                    Username <br>
+                    <input type="text" class="username" id="username" name="username">
+                </label>
+                <label for="password">
+                    Password <br>
+                    <input type="text" name="password" id="password" class="password">
+                </label>
+                <label for="password">
+                    Email <br>
+                    <input type="text" name="email" id="email" class="email">
+                </label>
+                <label for="profile">
+                    Add Profile Photo <br>
+                    <input type="file" name="profile" id="profile" class="profile">
+                </label>
+                <button>Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <div class="right-end"></div>
+</body>
+</html>

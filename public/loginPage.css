@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    margin: 0px;
+    padding: 0px;
+}
+.login-space{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    row-gap: 30px;
+}
+.login-form input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    width: 400px;
+}
+.login-form button{
+    width: 90px;
+    height: 50px;
+    font-size: 16px;
+    background-color: rgb(56, 56, 236);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+.login-form button:hover{
+    cursor: pointer;
+}
+
+
+.image-space{
+    background-image: url('loginImage.jpg');
+    background-size: cover;
+}

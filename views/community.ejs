@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/community.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="image-sec">
+            <p>Blogs Villa</p>
+        </div>
+        <div class="quick-links">
+            <a href="/homepage/<%= username  %>">Home</a>
+            <a href="/community/<%= username  %>">Community</a>
+        </div>
+    </div>
+    <div class="blogs">
+        <% for(let blog of blogData) {%>
+            <a href="/blog/<%= blog._id %>">
+                <p class="title"><%= blog.title %></p>
+                <p class="username">@<%= blog.username %></p>
+                <p class="content"><%= blog.content.substring(0,200) %>...</p>
+            </a>
+        <% } %>
+    </div>
+    <div class="image">
+
+    </div>
+</body>
+</html>
