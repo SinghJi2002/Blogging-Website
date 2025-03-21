@@ -1,20 +1,18 @@
-body{
+body {
     background-color: black;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0px;
     padding: 0px;
-    padding-top:80px;
+    padding-top: 80px;
 }
 
-
-
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: black ;
+    background-color: black;
     display: flex;
     flex-direction: row;
     column-gap: 20px;
@@ -27,7 +25,8 @@ body{
     padding-left: 20px;
     z-index: 100;
 }
-.image-sec p{
+
+.image-sec p {
     font-size: 20px;
     font-weight: bolder;
     border: solid;
@@ -36,9 +35,10 @@ body{
     border-bottom: none;
     padding-right: 15px;
     color: white;
-    border-color: gray
+    border-color: gray;
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
     color: white;
     opacity: 0.9;
@@ -46,18 +46,15 @@ body{
     margin-right: 20px;
 }
 
-
-
-
-
-.blogs{
+.blogs {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     justify-content: center;
     align-items: center;
 }
-.blogs a{
+
+.blogs a {
     width: 600px;
     color: white;
     text-decoration: none;
@@ -65,24 +62,122 @@ body{
     border-radius: 20px;
     padding: 20px 20px;
 }
-.title{
+
+.title {
     font-size: 25px;
     font-weight: bolder;
     margin-bottom: 0px;
 }
-.username{
-    margin-top:0px;
+
+.username {
+    margin-top: 0px;
     opacity: 0.8;
 }
-.content{
+
+.content {
     font-size: 18px;
     opacity: 0.6;
 }
 
-
-.image{
+.image {
     position: sticky;
     right: 0;
     background-image: url('https://picsum.photos/2000/3000');
     background-size: cover;
+}
+
+/* Responsive Design Enhancements */
+@media screen and (max-width: 1024px) {
+    .blogs a {
+        width: 500px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-rows: auto; /* Adjust height based on content */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .quick-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a {
+        margin-right: 0;
+    }
+
+    .blogs {
+        padding: 15px;
+    }
+
+    .blogs a {
+        width: 100%;
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 15px;
+    }
+
+    .image {
+        display: none; /* Hide image in smartphone view */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-sec p {
+        font-size: 18px;
+        padding-right: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .blogs {
+        padding: 10px;
+        row-gap: 15px;
+    }
+
+    .blogs a {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
 }

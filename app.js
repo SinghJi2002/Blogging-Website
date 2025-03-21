@@ -1,11 +1,13 @@
 const express=require('express')
 const app=express()
+require('dotenv').config()
 const path=require('path')
 const mongoose=require('mongoose')
 const ejsMate=require('ejs-mate')
 const session=require('express-session')
 const brcypt=require('bcrypt')
 const multer=require('multer')
+const cloud_db=process.env.CLOUD_DB
 const {cloudinary,storage}=require('./cloudinary/index.js')
 const upload=multer({storage})
 const methodOverride=require('method-override')
@@ -30,7 +32,7 @@ const protectRoute=(req,res,next)=>{
     }
 }
 
-mongoose.connect("mongodb://localhost:27017/blogging").then(()=>{
+mongoose.connect(cloud_db).then(()=>{
     console.log("Connected")
 }).catch((err)=>{
     console.log(err)
@@ -92,7 +94,6 @@ app.post("/forgetPassword",async(req,res)=>{
         res.status(404).send('Email Not Found')
     }
     const password=emailFound.password
-    sendPassword(email,password)
 
 })
 app.get("/login",(req,res)=>{
@@ -130,5 +131,5 @@ app.get("/forgetPassword",(req,res)=>{
 })
 
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
 

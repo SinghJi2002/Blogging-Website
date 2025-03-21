@@ -1,27 +1,93 @@
-body{
+body {
     background-color: black;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0; /* Added to remove default margins */
+    padding: 20px; /* Added slight padding for edge cases */
+    min-height: 100vh; /* Ensures full height coverage */
 }
 
-.blog{
+.blog {
     width: 60%;
     text-align: center;
 }
-.blog-header{
+
+.blog-header {
     font-size: 40px;
     font-weight: bolder;
     margin-bottom: 0px;
 }
-.blog-subheader{
+
+.blog-subheader {
     margin-top: 10px;
     font-size: 20px;
     opacity: 0.8;
 }
-.blog-content{
+
+.blog-content {
     font-size: 25px;
     font-weight: 600;
+}
+
+/* Responsive Design Enhancements */
+@media screen and (max-width: 1024px) {
+    .blog {
+        width: 70%; /* Slightly wider for tablets */
+    }
+
+    .blog-header {
+        font-size: 36px;
+    }
+
+    .blog-subheader {
+        font-size: 18px;
+    }
+
+    .blog-content {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        width: 85%; /* Wider for smaller screens */
+    }
+
+    .blog-header {
+        font-size: 32px;
+    }
+
+    .blog-subheader {
+        font-size: 16px;
+    }
+
+    .blog-content {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px; /* Adjusted padding for small screens */
+    }
+
+    .blog {
+        width: 90%; /* Almost full width for smartphones */
+    }
+
+    .blog-header {
+        font-size: 28px;
+    }
+
+    .blog-subheader {
+        font-size: 14px;
+        margin-top: 8px; /* Slightly reduced spacing */
+    }
+
+    .blog-content {
+        font-size: 18px;
+    }
 }

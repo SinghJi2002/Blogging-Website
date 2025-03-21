@@ -1,4 +1,4 @@
-body{
+body {
     background-color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: grid;
@@ -6,13 +6,15 @@ body{
     margin: 0px;
     padding: 0px;
 }
-.login-space{
+
+.login-space {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.login-form{
+
+.login-form {
     width: 500px;
     height: 600px;
     display: flex;
@@ -23,14 +25,16 @@ body{
     border-radius: 20px;
     row-gap: 30px;
 }
-.login-form input{
+
+.login-form input {
     border-top: none;
     border-left: none;
     border-right: none;
     outline: none;
     width: 400px;
 }
-.login-form button{
+
+.login-form button {
     width: 90px;
     height: 50px;
     font-size: 16px;
@@ -40,12 +44,86 @@ body{
     outline: none;
     border-radius: 30px;
 }
-.login-form button:hover{
+
+.login-form button:hover {
     cursor: pointer;
 }
 
-
-.image-space{
+.image-space {
     background-image: url('loginImage.jpg');
     background-size: cover;
+}
+
+/* Responsive Design Enhancements */
+@media screen and (max-width: 1024px) {
+    .login-form {
+        width: 450px;
+        height: 550px;
+    }
+
+    .login-form input {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-rows: auto; /* Adjust height based on content */
+    }
+
+    .login-space {
+        height: 100vh; /* Full height for login section */
+    }
+
+    .login-form {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+        row-gap: 25px;
+    }
+
+    .login-form input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .login-form button {
+        width: 80px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .image-space {
+        display: none; /* Hide image-space in smartphone view */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-form {
+        width: 85%;
+        max-width: 350px;
+        padding: 15px;
+        row-gap: 20px;
+    }
+
+    .login-form h1 {
+        font-size: 24px;
+    }
+
+    .login-form input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .login-form button {
+        width: 70px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .login-form a {
+        font-size: 14px;
+    }
 }
